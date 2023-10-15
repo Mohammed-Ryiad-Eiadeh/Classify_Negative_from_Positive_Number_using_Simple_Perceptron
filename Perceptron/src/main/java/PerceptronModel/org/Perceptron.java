@@ -84,4 +84,12 @@ public class Perceptron {
     public int Predict(double value) {
         return (int) activationFunction.applyAsDouble(weight * value + bias);
     }
+
+    public double GetCurrentWeight() {
+        return weight;
+    }
+
+    public double GetCurrentBias() {
+        return bias;
+    }
 }
