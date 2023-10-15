@@ -80,4 +80,8 @@ public class Perceptron {
         }
         return 1 - ((double) errorCounter / testSet.size());
     }
+
+    public int Predict(double value) {
+        return (int) activationFunction.applyAsDouble(weight * value + bias);
+    }
 }
