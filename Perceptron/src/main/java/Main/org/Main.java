@@ -27,7 +27,10 @@ public class Main {
                 20);
 
         // Train the model
+        var sDate = System.currentTimeMillis();
         model.train(trainSet);
+        var eDate = System.currentTimeMillis();
+        System.out.println("\nThe duration time of the training is : " + (eDate - sDate) + " ms");
 
         // Validate the model
         var validation = model.getValidationAccuracy(trainSet, 0.5f, 12345);
@@ -36,5 +39,9 @@ public class Main {
         // Test the model
         var testing = model.test(testSet);
         System.out.println("\nThe testing accuracy is : " + testing);
+
+        // Make some prediction
+        var val = 2000;
+        System.out.println("\nThe prediction of " + val + "\t is class : " + model.Predict(2000));
     }
 }
