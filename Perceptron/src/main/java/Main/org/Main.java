@@ -43,5 +43,9 @@ public class Main {
         // Make some prediction
         var val = 2000;
         System.out.println("\nThe prediction of " + val + "\t is class : " + model.Predict(2000));
+
+        // Return w and b
+        System.out.println("\nThe current weight is : " + model.GetCurrentWeight());
+        System.out.println("\nThe current bias is : " + model.GetCurrentBias());
     }
 }
